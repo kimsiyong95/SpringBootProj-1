@@ -32,9 +32,12 @@
   - 상품을 카테고리로 구분할 수 있다.
   - 상품 주문시 배송 정보를 입력할 수 있다.
 
-##### 도메인 모델 설계
+##### 도메인 설계
 <img src="/src/main/resources/static/images/domainDesign.png" width="500px;" height="250px;">
+
+##### 엔티티 설계
+<img src="/src/main/resources/static/images/entityDesign.png" width="500px;" height="330px;">
 
 ##### 테이블 설계
 ITEM 테이블을 싱글 테이블 전략 사용 : 상품 별로 테이블을 나눠도 되지만 토이 프로젝트를 감안해서 싱글 테이블 전략 사용<br>
-<img src="/src/main/resources/static/images/tableDesign.png" width="500px;" height="250px;">
+<img src="/src/main/resources/static/images/tableDesign.png" width="500px;" height="330px;">
