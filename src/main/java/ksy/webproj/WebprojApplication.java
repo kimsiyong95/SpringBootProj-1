@@ -1,5 +1,6 @@
 package ksy.webproj;
 
+import ksy.webproj.domain.Delivery;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

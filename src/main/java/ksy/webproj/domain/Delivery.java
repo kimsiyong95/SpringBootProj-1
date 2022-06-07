@@ -1,16 +1,13 @@
 package ksy.webproj.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Getter
 @Builder
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class Delivery {
 
@@ -18,7 +15,7 @@ public class Delivery {
     @Column(name = "delivery_id")
     private Long id;
 
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne(mappedBy = "delivery", fetch = FetchType.LAZY)
     private Order order;
 
     @Embedded
@@ -26,4 +23,8 @@ public class Delivery {
 
     @Enumerated(EnumType.STRING)
     private DeliveryStatus deliveryStatus;
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 }
