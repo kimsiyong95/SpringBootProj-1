@@ -44,6 +44,7 @@ public class ItemController {
     public String updateItemForm(@PathVariable("itemId") Long itemId, Model model){
         Book item = (Book) itemService.findOne(itemId);
 
+
         BookForm form = new BookForm();
         form.setId(item.getId());
         form.setName(item.getName());
@@ -58,6 +59,7 @@ public class ItemController {
 
     @PostMapping("items/{itemId}/edit")
     public String updateItem(@ModelAttribute("form") BookForm form){
+        //병합을 이용한 update, 변경 감지를 이용한 update를 권장
         Book book = Book.builder()
                         .id(form.getId())
                         .name(form.getName())

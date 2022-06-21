@@ -7,6 +7,7 @@
 - spring-boot-starter-test
 - spring-boot-starter-thymeleaf
 - spring-boot-starter-data-jpa
+- com.querydsl:querydsl-jpa:5.0.0
 - spring-boot-devtools
 - org.projectlombok:lombok
 - com.h2database:h2
