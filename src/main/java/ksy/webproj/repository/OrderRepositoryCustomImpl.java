@@ -43,7 +43,8 @@ public class OrderRepositoryCustomImpl extends QuerydslRepositorySupport impleme
 
 
 
-    public BooleanExpression likeMemberName(OrderSearch orderSearch){
+    public BooleanExpression
+    likeMemberName(OrderSearch orderSearch){
         return StringUtils
                 .isNullOrEmpty(orderSearch.getMemberName()) ? null : qOrder.member.name.like(orderSearch.getMemberName());
     }
